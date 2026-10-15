@@ -97,10 +97,10 @@ assert.equal(
   "Le paquet macOS universel doit conserver les variantes natives de sharp et ONNX Runtime",
 );
 for (const dependency of [
-  "@img/sharp-darwin-arm64@0.34.5",
-  "@img/sharp-darwin-x64@0.34.5",
-  "@img/sharp-libvips-darwin-arm64@1.2.4",
-  "@img/sharp-libvips-darwin-x64@1.2.4",
+  "@img/sharp-darwin-arm64@0.35.5",
+  "@img/sharp-darwin-x64@0.35.5",
+  "@img/sharp-libvips-darwin-arm64@1.3.4",
+  "@img/sharp-libvips-darwin-x64@1.3.4",
 ]) {
   assert.match(
     packageJson.scripts?.["prepare:mac-universal"] ?? "",

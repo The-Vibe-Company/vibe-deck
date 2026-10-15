@@ -545,6 +545,11 @@ try {
   await page.screenshot({ path: path.join(projectRoot, ".context", "dashboard-tabs.png") });
   const newPanelButton = page.getByRole("button", { name: "Nouveau panel", exact: true });
   await newPanelButton.waitFor({ state: "visible" });
+  await tablist.getByRole("tab", { name: /Listes X/ }).click();
+  await page.waitForFunction(
+    (tabId) => document.querySelector(`[role="tab"][id="dashboard-tab-${tabId}"]`)?.getAttribute("aria-selected") === "true",
+    secondTabId,
+  );
   await page.waitForFunction(() => {
     const button = document.querySelector('button[aria-label="Nouveau panel"]');
     return button instanceof HTMLButtonElement && !button.disabled;

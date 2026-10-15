@@ -633,6 +633,13 @@ export default function App() {
   draftsRef.current = drafts;
   focusedPanelIdRef.current = focusedPanelId;
   activeSemanticSearchRef.current = activeSemanticSearch;
+  // La capture anticipée (focus qui quitte le panel, pointerdown sur un onglet)
+  // fige le layout. Un brouillon créé ensuite doit remplacer cet instantané,
+  // sinon le retour sur l’onglet restaure l’état d’avant et le brouillon disparaît.
+  if (preCapturedTabIdRef.current === activeTabIdRef.current && activeTabIdRef.current) {
+    const preCapturedRuntime = tabRuntimeRef.current.get(activeTabIdRef.current);
+    if (preCapturedRuntime) preCapturedRuntime.transientLayout = layout;
+  }
 
   useEffect(() => {
     const clearPanelFocusOutsideWorkspace = (event: FocusEvent) => {
