@@ -31,6 +31,8 @@ Sauf demande explicite, ne pas introduire :
 - télémétrie distante ;
 - contournement d’anti-bot, de paywall ou de restriction d’accès.
 
+Le site vitrine (`site/`, vibedeck.thevibecompany.co) est l’exception déjà en place : il enregistre des pages vues anonymes chez PostHog. Cette mesure ne s’étend ni au renderer, ni au processus principal, ni aux vues web.
+
 Les futurs types de panels doivent étendre le modèle existant sans spécialiser le moteur de layout.
 
 ## Carte du dépôt
