@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.13.0](https://github.com/The-Vibe-Company/vibe-deck/compare/v0.12.0...v0.13.0) (2026-10-15)
+
+
+### Features
+
+* **dashboard:** ajouter les onglets persistants ([#69](https://github.com/The-Vibe-Company/vibe-deck/issues/69)) ([64bb22e](https://github.com/The-Vibe-Company/vibe-deck/commit/64bb22e76e1b527f2d3623c834448b7a0ef558f6))
+* **site:** mesurer les pages vues du site vitrine ([#72](https://github.com/The-Vibe-Company/vibe-deck/issues/72)) ([4cd6d75](https://github.com/The-Vibe-Company/vibe-deck/commit/4cd6d75f7de854127a931d7ee94650efbc4947ad))
+
 ## [0.12.0](https://github.com/The-Vibe-Company/VibeDeck/compare/v0.11.0...v0.12.0) (2026-07-17)
 
 
